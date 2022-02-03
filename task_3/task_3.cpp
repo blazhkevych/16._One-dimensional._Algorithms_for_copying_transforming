@@ -38,7 +38,7 @@ int main()
 	}
 	cout << endl;
 
-	for (int i = 0, j = 0; i < c_Size; i++, j++)
+	for (int i = 0, j = 0; i < c_Size; i++, j++) // копируются элементы из первого и второго массива поочередно
 	{
 		c[i] = a[j];
 		i++;
