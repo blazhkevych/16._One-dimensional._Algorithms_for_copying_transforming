@@ -3,7 +3,6 @@
 следования элементов массива на противоположный (0-й элемент
 меняется с 9-м, 1-й элемент с 8-м и т.д.).
 */
-// НЕ ГОТОВО
 
 #include <iostream>
 using std::cout;
@@ -15,8 +14,8 @@ int main()
 	setlocale(LC_ALL, ""); // работает только с потоком вывода
 	srand(time(0));
 
-	int min{ 0 };
-	int max{ 100 };
+	int min{ 10 };
+	int max{ 99 };
 	const int arr_1_Size{ 10 };
 
 	int arr_1[arr_1_Size]{ 0 };
@@ -28,6 +27,16 @@ int main()
 	}
 	cout << endl;
 
+	for (int i = 0; i < arr_1_Size / 2; i++) // в центральной части, условии, не заблуждаемся и не учитываем сдвиги, счет не с 0 а с 1 !
+	{
+		int temp = 0;
+		temp = arr_1[i];
+		arr_1[i] = arr_1[arr_1_Size - i - 1];
+		arr_1[arr_1_Size - i - 1] = temp;
+	}
+
+	for (int i = 0; i < arr_1_Size; i++) // заполняем 1 массив и выводим
+		cout << arr_1[i] << ' ';
 
 	return 0;
 }
