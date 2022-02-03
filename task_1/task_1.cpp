@@ -35,7 +35,7 @@ int main()
 		arr_1[arr_1_Size - i - 1] = temp;
 	}
 
-	for (int i = 0; i < arr_1_Size; i++) // заполняем 1 массив и выводим
+	for (int i = 0; i < arr_1_Size; i++) // выводим 1 массив 
 		cout << arr_1[i] << ' ';
 
 	return 0;
